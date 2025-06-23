@@ -1,0 +1,17 @@
+[
+    {
+        "query": "根據文件說明API用法",
+        "answer": "API 的使用說明如下：\n\n1. **API 連線網址**：\n   - https://td.nchc.org.tw/api/v1/\n\n2. **Request 參數**：\n   - **model**: [Require] 模型名稱，例如 \"TAIDE/a.2.0.0\"。\n   - **messages**: [Require] 包含對話內容的陣列，必須以 JSON 格式提供。\n   - **max_tokens**: 整數，指定模型最多回傳的 token 數量，預設為 16，最大不能超過模型上限。\n   - **temperature**: 浮點數，隨機程度，值越大越隨機，預設為 1。\n\n3. **API 限制**：\n   - completions: 10 requests/min\n   - chat/completions: 10 requests/min\n   - embedding: 100 requests/min\n\n4. **主要 API 端點**：\n   - **chat/completions**: 用於聊天回應。\n   - **models**: 取得可用模型資訊。\n   - **embeddings**: 用於取得詞嵌入。\n\n5. **Curl 範例**：\n   - 使用 curl 發送 POST 請求的範例：\n     ```bash\n     curl -X 'POST' 'https://td.nchc.org.tw/api/v1/chat/completions' \\\n     -H 'accept: application/json' \\\n     -H 'Authorization: Bearer <YOUR TOKEN>' \\\n     -H 'Content-Type: application/json' \\\n     -d '{\n       \"messages\": [\n         {\n           \"content\": \"你是⼀個來⾃台灣的 AI 助理，你的名字是 TAIDE。\",\n           \"role\": \"system\"\n         },\n         {\n           \"content\": \"你剛剛參加了⼀場關於環保的公共演講，感受良多，希望能寫⼀封信給演講者表⽰感謝。\",\n           \"role\": \"user\"\n         }\n       ],\n       \"model\": \"TAIDE/a.2.0.0\",\n       \"max_tokens\": 100,\n       \"temperature\": 0\n     }'\n     ```\n\n如需進一步的具體範例或說明，請告知！",
+        "feedback": "Good"
+    },
+    {
+        "query": "API怎麼使用",
+        "answer": "我不知道。",
+        "feedback": "Not Good"
+    },
+    {
+        "query": "根據文件，告訴我API的使用方法",
+        "answer": "API的使用方法如下：\n\n1. **API 連線網址**: \n   - https://td.nchc.org.tw/api/v1/\n\n2. **獲取 Token**:\n   - 使用者需要提供使用者名稱和密碼來獲取訪問令牌（Token）。\n   - 範例程式碼：\n     ```python\n     import requests\n     host = \"https://td.nchc.org.tw/api/v1\"\n     username = input(\"username: \")\n     password = input(\"password: \")\n     r = requests.post(host + \"/token\", data={\"username\": username, \"password\": password})\n     token = r.json()[\"access_token\"]\n     print(token)\n     ```\n\n3. **發送請求**:\n   - 使用獲取的 Token 來進行 API 請求。\n   - 例如，使用 chat/completions API：\n     ```python\n     headers = {\n         \"Authorization\": \"Bearer \" + token\n     }\n     messages = [\n         {\n             \"content\": \"你是⼀個來⾃台灣的 AI 助理，你的名字是 TAIDE，樂於以台灣⼈的立場幫助使用者，會⽤繁體中文回答問題。\",\n             \"role\": \"system\"\n         },\n         {\n             \"content\": \"你剛剛參加了⼀場關於環保的公共演講，感受良多，希望能寫⼀封信給演講者表⽰感謝。請根據你的感受和收穫，寫出⼀封感謝信的內容。\",\n             \"role\": \"user\"\n         }\n     ]\n     data = {\n         \"messages\": messages,\n         \"model\": \"TAIDE/a.2.0.0\",\n         \"max_tokens\": 100,\n         \"temperature\": 0\n     }\n     r = requests.post(host + \"/chat/completions\", json=data, headers=headers)\n     res = r.json()[\"choices\"][0][\"text\"]\n     print(res)\n     ```\n\n4. **API 限制**:\n   - 每分鐘的請求限制：\n     - completions: 10 requests/min\n     - chat/completions: 10 requests/min\n     - embedding: 100 requests/min\n\n5. **其他 API 功能**:\n   - 可以使用不同的 API 端點來獲取模型資訊、生成文本、獲取嵌入等。\n\n請根據上述步驟進行 API 的使用。",
+        "feedback": "Good"
+    }
+]

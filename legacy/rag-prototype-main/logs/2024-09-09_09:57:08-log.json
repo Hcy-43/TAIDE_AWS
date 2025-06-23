@@ -1,0 +1,66 @@
+[
+    {
+        "question": "請告訴我今天的天氣",
+        "answers": {
+            "multilingual-e5": "抱歉，我無法提供即時的天氣資訊。建議您查詢當地的天氣預報網站或應用程式以獲取最新的天氣資訊。",
+            "text_embedding_3_large": "抱歉，我無法提供即時的天氣資訊。建議您查詢當地的天氣預報網站或應用程式以獲取最新的天氣資訊。",
+            "text_embedding_3_small": "抱歉，我無法提供即時的天氣資訊。建議您查詢當地的天氣預報網站或應用程式以獲取最新的天氣資訊。",
+            "vanilla": "抱歉，我不知道今天的天氣。"
+        },
+        "message_id": 0,
+        "feedback": {
+            "multilingual-e5": {
+                "type": "faces",
+                "score": "😞",
+                "text": null
+            },
+            "text_embedding_3_large": {
+                "type": "faces",
+                "score": "🙂",
+                "text": null
+            },
+            "text_embedding_3_small": {
+                "type": "faces",
+                "score": "😐",
+                "text": null
+            },
+            "vanilla": {
+                "type": "faces",
+                "score": "😀",
+                "text": null
+            }
+        }
+    },
+    {
+        "question": "請告訴我臺灣的歷史",
+        "answers": {
+            "multilingual-e5": "我不知道。",
+            "text_embedding_3_large": "我不知道。",
+            "text_embedding_3_small": "我不知道。",
+            "vanilla": "臺灣的歷史可以追溯到數千年前，最早的居民是原住民族。他們在島上生活了幾千年，形成了多樣的文化和社會結構。\n\n16世紀時，歐洲探險者開始抵達臺灣，最早的記錄是由葡萄牙人和西班牙人所作。1624年，荷蘭人建立了在臺灣的殖民地，並開始進行貿易和農業開發。1626年，西班牙人在北部建立據點，但在1642年被荷蘭人驅逐。\n\n1662年，鄭成功（國姓爺）從明朝的流亡者中崛起，驅逐荷蘭人，建立了明鄭政權。這一政權持續到1683年，當時清朝將臺灣"
+        },
+        "message_id": 1,
+        "feedback": {
+            "multilingual-e5": {
+                "type": "faces",
+                "score": "😀",
+                "text": null
+            },
+            "text_embedding_3_large": {
+                "type": "faces",
+                "score": "😀",
+                "text": null
+            },
+            "text_embedding_3_small": {
+                "type": "faces",
+                "score": "😀",
+                "text": null
+            },
+            "vanilla": {
+                "type": "faces",
+                "score": "😀",
+                "text": null
+            }
+        }
+    }
+]

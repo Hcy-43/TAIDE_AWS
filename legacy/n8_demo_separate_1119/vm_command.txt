@@ -1,0 +1,45 @@
+--local：
+brew install putty
+puttygen medical.ppk -O private-openssh -o medical.pem
+chmod 600 medical.pem
+ssh -i ./medical.pem ubuntu@140.110.139.5
+
+--連到ubuntu後在ubuntu執行：（＃是預期會看到的結果 不是指令）
+sudo apt update
+sudo apt install -y xrdp
+sudo systemctl enable xrdp
+sudo adduser xrdp ssl-cert
+sudo systemctl restart xrdp
+sudo apt install -y xfce4 xfce4-goodies
+echo "startxfce4" | sudo tee -a /etc/skel/.xsession
+echo "xfce4-session" | sudo tee /etc/xrdp/startwm.sh
+sudo ufw status
+#Status: inactive
+
+sudo ufw allow 3389
+#Rules updated
+#Rules updated (v6)
+
+sudo systemctl status xrdp
+#綠色的字寫Active: active (running)
+
+sudo apt install -y net-tools
+sudo netstat -tuln | grep 3389
+#tcp6       0      0 :::3389                 :::*                    LISTEN    
+
+sudo passwd ubuntu
+#設定密碼 medical@TAIDE@2024
+
+sudo iptables -L
+sudo iptables -A INPUT -p tcp --dport 3389 -j ACCEPT
+sudo systemctl restart xrdp
+sudo tail -f /var/log/xrdp.log
+
+--重開一個terminal在 local：
+ssh -i ./medical.pem -L 3389:localhost:3389 ubuntu@140.110.139.5
+＃連到ubuntu
+
+--打開Microsoft Remote Desktop：
+設定PCName是localhost
+新增user: ubuntu
+password: medical@TAIDE@2024

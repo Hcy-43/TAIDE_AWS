@@ -1,0 +1,66 @@
+[
+    {
+        "question": "請告訴我臺灣最大的公司",
+        "answers": {
+            "multilingual-e5": "我不知道。",
+            "text_embedding_3_large": "我不知道。",
+            "text_embedding_3_small": "我不知道。",
+            "vanilla": "截至2023年，臺灣最大的公司通常被認為是台積電（Taiwan Semiconductor Manufacturing Company, TSMC）。台積電是全球最大的半導體製造公司之一，對於全球科技產業有著重要的影響力。"
+        },
+        "message_id": 0,
+        "feedback": {
+            "multilingual-e5": {
+                "type": "faces",
+                "score": "😀",
+                "text": null
+            },
+            "text_embedding_3_large": {
+                "type": "faces",
+                "score": "😀",
+                "text": null
+            },
+            "text_embedding_3_small": {
+                "type": "faces",
+                "score": "🙁",
+                "text": null
+            },
+            "vanilla": {
+                "type": "faces",
+                "score": "🙂",
+                "text": null
+            }
+        }
+    },
+    {
+        "question": "請告訴我臺灣的氣候",
+        "answers": {
+            "multilingual-e5": "臺灣的氣候可分為兩個主要區域：中部及北部屬於亞熱帶季風氣候，而嘉義以南則屬於熱帶季風氣候。夏季從5月到9月，天氣炎熱，特別是在大臺北地區，由於盆地地形和都市熱島效應，夏季最高氣溫經常可達35℃及以上，7月的平均氣溫接近30℃。冬季時，北方的西伯利亞冷高壓南下，冷空氣受到海洋調和，因此即使在冬季，氣溫相對於同緯度的華南地區仍然較為溫和。",
+            "text_embedding_3_large": "臺灣的氣候可分為兩個主要區域：中部及北部屬於亞熱帶季風氣候，而嘉義以南則屬於熱帶季風氣候。夏季從5月到9月，天氣炎熱，特別是在大臺北地區，由於盆地地形和都市熱島效應，夏季最高氣溫經常可達35℃及以上，7月的平均氣溫接近30℃。冬季時，北方的西伯利亞冷高壓南下，冷空氣受到海洋調和，因此即使在冬季，氣溫相對於同緯度的華南地區仍然較為溫和。",
+            "text_embedding_3_small": "臺灣的氣候可分為兩個主要區域：中部及北部屬於亞熱帶季風氣候，而嘉義以南則屬於熱帶季風氣候。夏季從5月到9月，天氣炎熱，特別是在大臺北地區，由於盆地地形和都市熱島效應，夏季最高氣溫經常可達35℃及以上，7月的平均氣溫接近30℃。冬季時，北方的西伯利亞冷高壓南下，冷空氣受到海洋調和，因此即使在冬季，氣溫相對於同緯度的華南地區仍然較為溫和。",
+            "vanilla": "臺灣的氣候主要是亞熱帶氣候，南部則接近熱帶氣候。整體來說，臺灣的氣候特點包括四季分明，夏季炎熱潮濕，冬季較為涼爽。夏季通常從6月到9月，氣溫可達30°C以上，並伴隨著梅雨季和颱風季節。冬季則從12月到2月，氣溫一般在10°C到20°C之間，北部地區可能會較冷。臺灣的降雨量分布不均，北部地區降雨較多，而南部則相對乾燥。"
+        },
+        "message_id": 1,
+        "feedback": {
+            "multilingual-e5": {
+                "type": "faces",
+                "score": "😀",
+                "text": null
+            },
+            "text_embedding_3_large": {
+                "type": "faces",
+                "score": "😀",
+                "text": null
+            },
+            "text_embedding_3_small": {
+                "type": "faces",
+                "score": "😀",
+                "text": null
+            },
+            "vanilla": {
+                "type": "faces",
+                "score": "🙂",
+                "text": null
+            }
+        }
+    }
+]
